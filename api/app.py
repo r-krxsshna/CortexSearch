@@ -19,6 +19,6 @@ app.add_middleware(
 
 app.include_router(upload_router)
 
-@app.get("/")
-def root():
-    return {"message": "CortexSearch Backend is running"}
+@app.get("/", tags=["Health Check"])
+def health_status():
+    return {"message": "CortexSearch Backend is running...."}

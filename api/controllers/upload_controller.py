@@ -9,7 +9,7 @@ import os
 import uuid
 
 logger = get_logger(__name__)
-router = APIRouter(prefix="/v1", tags=["upload"])
+router = APIRouter(prefix="/v1", tags=["Upload"])
 
 @router.post("/upload", response_model=UploadResponse)
 async def upload_file(file: UploadFile = File(...)):
